@@ -1,0 +1,24 @@
+stdW:=1024
+stdH:=768
+ResizeWindow(ScreenWidth,ScreenHeight)
+sw:=ScreenWidth
+sh:=ScreenHeight
+sd:=ScreenDepth
+
+if sh<768 then
+    SystemMessageBox(WindowHandle,"正常运行本软件需要至少1024*768的分辨率，您的电脑分辨辛太低,请切换分辨率或换台电脑试试。","警告")
+    Quit(0)
+end if
+
+if sh/sw=9/16 & sh>=stdH then
+    alChangeRes(1366,stdH,32)
+end if
+
+if sh/sw=4/5 & sh>=stdH then
+    alChangeRes(stdW,stdH,32)
+end if
+
+Cover()
+alHideTaskBar()
+SetWindowPos(WindowHandle,-1 ,0,0,0, 0,3)        --强制当前窗口前端显示
+ExitIcon := IconID@"resetWindow"                --指定当程序在任意情况逐出前先执行quit中的代码

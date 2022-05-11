@@ -1,0 +1,1 @@
+SetWindowText(WindowHandle,"印像")

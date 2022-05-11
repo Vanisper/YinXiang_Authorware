@@ -1,0 +1,2 @@
+wfr:=set_anicur(WindowHandle,FileLocation^"\\src\\cursor\\Black\\pointer.cur")
+SetCursor(wfr)

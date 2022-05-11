@@ -1,0 +1,7 @@
+if sh<>ScreenHeight then
+    alChangeRes(Sw,sh,sd)
+end if
+
+--alShowTaskBar()
+--Uncover()
+Quit(0)
